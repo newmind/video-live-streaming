@@ -1,0 +1,18 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "server-stream base64",
+            "program": "${workspaceFolder}/server-stream.js",
+            "args": [
+                "temp123",
+                 "8082", "8084", "base64"
+            ]
+        }
+    ]
+}
