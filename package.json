@@ -1,0 +1,23 @@
+{
+  "name": "video-live-streaming",
+  "version": "1.0.0",
+  "description": "This tutorial describes how to display video data in real-time on the canvas object in html5.  Data are broadcast by web socket to html5 in two different ways:",
+  "main": "server-http.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/newmind/video-live-streaming.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/newmind/video-live-streaming/issues"
+  },
+  "homepage": "https://github.com/newmind/video-live-streaming#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "ws": "^3.3.2"
+  }
+}
