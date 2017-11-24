@@ -1,6 +1,4 @@
 var ws = require('ws');
-var fs = require('fs')
-
 
 if( process.argv.length < 3 ) {
 	console.log(
@@ -37,17 +35,10 @@ socketServer.on('connection', function(socket) {
 	});
 });
 
-var count = 1
-
 socketServer.broadcast = function(data, opts) {
 	this.clients.forEach(function each(client) {
 		if (client.readyState == ws.OPEN) {
             if('base64' == STREAM_FORMAT) {
-				// filename = "image" + count++ + ".jpg"
-				// fs.writeFile(filename, data, function(err)  {
-				// 	if (err) 
-				// 		console.log()
-				// });
                 client.send('data:image/jpeg;base64,' + data.toString('base64'), opts);
             }else{
                 client.send(data, opts);
@@ -57,18 +48,6 @@ socketServer.broadcast = function(data, opts) {
 			console.log( 'Error: Client is not ready.' );
 		}
 	});
-	// for( var i in this.clients ) {
-	// 	if (this.clients[i].readyState == 1) {
-    //         if('base64' == STREAM_FORMAT) {
-    //             this.clients[i].send('data:image/jpeg;base64,' + data.toString('base64'), opts);
-    //         }else{
-    //             this.clients[i].send(data, opts);
-    //         }
-	// 	}
-	// 	else {
-	// 		console.log( 'Error: Client ('+i+') not connected.' );
-	// 	}
-	// }
 };
 
 
